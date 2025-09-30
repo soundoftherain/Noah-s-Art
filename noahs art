@@ -1,6 +1,6 @@
 mkdir noahs-art
 cd noahs-art
-npm create vite@latest .
+npm create vite@latest 
 # Choose: react
 npm install
 npm install -D tailwindcss postcss autoprefixer
