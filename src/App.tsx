@@ -1,3 +1,4 @@
+// src/App.tsx
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -5,7 +6,7 @@ import Universe from "./pages/Universe";
 import MeetTheFounder from "./pages/MeetTheFounder";
 import NotFound from "./pages/NotFound";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
