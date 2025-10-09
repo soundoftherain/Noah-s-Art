@@ -3,7 +3,10 @@ name: Deploy Noah's Art
 on:
   push:
     branches:
-      - main  # runs when you push to main
+      - main
+
+permissions:
+  contents: write  # 👈 this line fixes your 403 push error
 
 jobs:
   build-and-deploy:
