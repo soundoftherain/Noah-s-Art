@@ -5,15 +5,12 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write  # 👈 this line fixes your 403 push error
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -24,8 +21,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build site
+      - name: Build project
         run: npm run build
+
+      - name: Add .nojekyll
+        run: echo "" > dist/.nojekyll
+
+      - name: Copy CNAME for custom domain
+        run: cp public/CNAME dist/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
