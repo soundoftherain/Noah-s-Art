@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="global.css">
   <link rel="icon" href="assets/favicon.ico">
   <style>
-    /* Small button adjustments inside episode list */
-    .episode-button {
+    /* Small button adjustments inside lists */
+    .episode-button, .character-button {
       display: inline-block;
       margin-top: 0.25rem;
       padding: 0.4rem 0.8rem;
@@ -19,7 +19,7 @@
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-    .episode-button:hover {
+    .episode-button:hover, .character-button:hover {
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(255,255,255,0.2);
     }
@@ -38,20 +38,20 @@
       <h2>Characters</h2>
       <ul>
         <li>
-          <strong>Feathers</strong> – A blues-wailing peacock inspired by Muddy Waters and Howlin’ Wolf. His feathers contain tiny blockchain blocks.  
-          Coin: Ark Coin. Abilities: Musical NFT drops, Narrative influence.
+          <strong>Feathers</strong> – A blues-wailing peacock inspired by Muddy Waters and Howlin’ Wolf.  
+          <button class="character-button" onclick="showCharacter('Feathers')">Info</button>
         </li>
         <li>
-          <strong>Hoodlum</strong> – A rooster with deep, husky rap style, uniquely his own. Influences story arcs and stakes Ark Coin.  
-          Coin: Ark Coin. Abilities: Performance episodes, NFT-gated content.
+          <strong>Hoodlum</strong> – A rooster with deep, husky rap style, uniquely his own.  
+          <button class="character-button" onclick="showCharacter('Hoodlum')">Info</button>
         </li>
         <li>
-          <strong>Guardian</strong> – The watchful owl, embodies wisdom and network security. Protects Noah’s Protocol with PQC.  
-          Coin: Guardian Coin. Abilities: Network security, Governance, Staking.
+          <strong>Guardian</strong> – The watchful owl, embodies wisdom and network security.  
+          <button class="character-button" onclick="showCharacter('Guardian')">Info</button>
         </li>
         <li>
-          <strong>Knight</strong> – The black stallion representing speed and efficiency in the network. Helps accelerate platform interactions.  
-          Coin: Knight Coin. Abilities: Staking, Governance, Network acceleration.
+          <strong>Knight</strong> – The black stallion representing speed and efficiency in the network.  
+          <button class="character-button" onclick="showCharacter('Knight')">Info</button>
         </li>
       </ul>
     </section>
@@ -87,4 +87,44 @@
           <button class="episode-button" onclick="buyNFT('Arkfall Bazaar')">Buy NFT</button>
         </li>
         <li>
-          <strong>The Silent Orbit</strong> (Oct 21, 2025) – Ark validators go offline for 12 minutes, letting holders pilot
+          <strong>The Silent Orbit</strong> (Oct 21, 2025) – Ark validators go offline for 12 minutes, letting holders pilot the Ark alone. Collective choices ripple across the multiverse.  
+          Aura: Resonance. Access: NFT Reserve.<br>
+          <button class="episode-button" onclick="buyNFT('The Silent Orbit')">Buy NFT</button>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+  <script>
+    // NFT purchase alert
+    function buyNFT(episode) {
+      alert('Purchase NFT for episode: ' + episode);
+    }
+
+    // Character info alert
+    function showCharacter(name) {
+      const characters = {
+        "Feathers": {
+          coin: "Ark Coin",
+          abilities: ["Musical NFT drops", "Narrative influence"]
+        },
+        "Hoodlum": {
+          coin: "Ark Coin",
+          abilities: ["Performance episodes", "NFT-gated content"]
+        },
+        "Guardian": {
+          coin: "Guardian Coin",
+          abilities: ["Network security", "Governance", "Staking"]
+        },
+        "Knight": {
+          coin: "Knight Coin",
+          abilities: ["Staking", "Governance", "Network acceleration"]
+        }
+      };
+      const char = characters[name];
+      alert(`${name}\nCoin: ${char.coin}\nAbilities: ${char.abilities.join(", ")}`);
+    }
+  </script>
+</body>
+</html>
