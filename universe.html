@@ -5,6 +5,25 @@
   <title>Noah’s Art Universe</title>
   <link rel="stylesheet" href="global.css">
   <link rel="icon" href="assets/favicon.ico">
+  <style>
+    /* Small button adjustments inside episode list */
+    .episode-button {
+      display: inline-block;
+      margin-top: 0.25rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      background: linear-gradient(to right, #6b5bff, #ff6fcf, #ff9f6b);
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .episode-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -42,32 +61,30 @@
       <h2>Episodes</h2>
       <ul>
         <li>
-          <strong>Genesis Wave</strong> (TBA) – Ark Signal Detected. The Ark awakens and broadcasts coordinates hidden inside a spectrum no human eye has seen.
+          <strong>Genesis Wave</strong> (TBA) – Ark Signal Detected. The Ark awakens and broadcasts coordinates hidden inside a spectrum no human eye has seen.<br>
+          <button class="episode-button" onclick="buyNFT('Genesis Wave')">Buy NFT</button>
         </li>
         <li>
-          <strong>Fractal Current</strong> (TBA) – Meme Coin Bloom. Each character crystallizes into a living manifesto, minting coins and unlocking NFT content.
+          <strong>Fractal Current</strong> (TBA) – Meme Coin Bloom. Each character crystallizes into a living manifesto, minting coins and unlocking NFT content.<br>
+          <button class="episode-button" onclick="buyNFT('Fractal Current')">Buy NFT</button>
         </li>
         <li>
-          <strong>Chromatic Rift</strong> (TBA) – Splintered Alliances. Holders choose alignments and fund missions that alter Noah's Art physics.
+          <strong>Chromatic Rift</strong> (TBA) – Splintered Alliances. Holders choose alignments and fund missions that alter Noah's Art physics.<br>
+          <button class="episode-button" onclick="buyNFT('Chromatic Rift')">Buy NFT</button>
         </li>
         <li>
-          <strong>Aurora Assembly</strong> (TBA) – Ark Council Convenes. Validators gather over a prism sea drafting treaties that shape destinies.
+          <strong>Aurora Assembly</strong> (TBA) – Ark Council Convenes. Validators gather over a prism sea drafting treaties that shape destinies.<br>
+          <button class="episode-button" onclick="buyNFT('Aurora Assembly')">Buy NFT</button>
         </li>
         <li>
           <strong>Chorus of Mirrors</strong> (Aug 02, 2025) – Collectors co-compose a ritual chant that splinters into eight mirror-verses. Decisions determine which realities survive and which collapse.  
-          Aura: Refraction. Access: NFT Reserve.
+          Aura: Refraction. Access: NFT Reserve.<br>
+          <button class="episode-button" onclick="buyNFT('Chorus of Mirrors')">Buy NFT</button>
         </li>
         <li>
           <strong>Arkfall Bazaar</strong> (Sep 13, 2025) – A floating marketplace over the Prism Sea where meme coins manifest as familiars guiding new collectors.  
-          Aura: Marketplace. Access: NFT Reserve.
+          Aura: Marketplace. Access: NFT Reserve.<br>
+          <button class="episode-button" onclick="buyNFT('Arkfall Bazaar')">Buy NFT</button>
         </li>
         <li>
-          <strong>The Silent Orbit</strong> (Oct 21, 2025) – Ark validators go offline for 12 minutes, letting holders pilot the Ark alone. Collective choices ripple across the multiverse.  
-          Aura: Resonance. Access: NFT Reserve.
-        </li>
-      </ul>
-    </section>
-
-  </div>
-</body>
-</html>
+          <strong>The Silent Orbit</strong> (Oct 21, 2025) – Ark validators go offline for 12 minutes, letting holders pilot
